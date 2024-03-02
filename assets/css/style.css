@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Kufam:ital,wght@0,400..900;1,400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lavishly+Yours&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* ===================================
+Root  CSS
+=================================== */
+:root{
+    --base-white-a: #F6F6F6;
+    --base-white-b: #F9F9F9;
+    --base-white-c: #EFEFEF;
+    --base-black-a: #151515;
+    --base-para-a: #717171;
+    --theme-color-a: #BE7C00;
+    --theme-color-a: #BE7C00;
+    --theme-color-c: #DFAF54;
+}
+.arabic-font{
+    font-family: "Lavishly Yours", cursive;
+    direction: rtl;
+}
+.arabic-font-2{
+    font-family: "Kufam", sans-serif;
+    direction: rtl;
+}
+.gerat-vibes-font{
+    font-family: "Great Vibes", cursive;
+}
+
+/* Colors */
+.base-white-a,.hover-white-a:hover{
+    color: var(--base-white-a);
+}
+.base-black-a,.hover-black-a:hover{
+    color: var(--base-black-a);
+}
+.base-a-op-90{
+    color: var(--base-black-a);
+    opacity: .9;
+}
+.base-para-a,.hover-parap-a:hover{
+    color: var(--base-para-a);
+}
+.theme-color-a,.hover-theme-color-a:hover{
+    color: var(--theme-color-a);
+}
+.theme-color-b,.hover-theme-color-b:hover{
+    color: var(--theme-color-b);
+}
+.theme-color-c,.hover-theme-color-c{
+    color: var(--theme-color-c);
+}
+
+/* Backgrounds */
+.bg-trunsparant{
+    background: transparent;
+}
+.bg-white-a{
+    background: var(--base-white-a);
+}
+.bg-white-b{
+    background: var(--base-white-b);
+}
+.bg-white-c{
+    background: var(--base-white-c);
+}
+.bg-black-a{
+    background: var(--base-black-a);
+}
+.theme-bg-c{
+    background: var(--theme-color-c);
+}
+
+
+.theme-btn{
+    padding: 16px 32px;
+    border-radius: 8px;
+    display: inline-block;
+    border: 0px;
+    font-size: 24px;
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    padding-right: 50px;
+    transition: .3s ease;
+}
+.theme-btn .btn-img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 24px;
+    transition: .3s ease;
+}
+.theme-btn:hover{
+    padding-right: 64px;
+    background: var(--base-black-a);
+    color: var(--base-white-a);
+}
+.theme-btn:hover .btn-img{
+    right: 28px
+}
+.btn-left-icon {
+    opacity: 0;
+    transition: .3s ease;
+}
+.btn-right-icon {
+    opacity: 0;
+    transition: .3s ease;
+}
+.theme-btn:hover .btn-left-icon{
+    transform: translateY(-50%) translateX(-10px);
+    opacity: 1;
+    animation: color_anim 1s infinite;
+}
+.theme-btn:hover .btn-left-icon path{
+    animation: color_anim 1s infinite 0.2s;
+}
+.theme-btn:hover .btn-middle-icon path{
+    animation: color_anim 1s infinite 0.4s;
+}
+.theme-btn:hover .btn-right-icon path{
+    animation: color_anim 1s infinite 0.6s;
+}
+.theme-btn:hover .btn-right-icon{
+    transform: translateY(-50%) translateX(10px);
+    opacity: 1;
+}
+
+.bg-black-btn{
+    background: var(--base-black-a);
+    color: var(--base-white-a);
+}
+.bg-black-btn:hover , .btn-on-dark-bg:hover{
+    background: var(--theme-color-a);
+}
+.bg-black-btn:hover .btn-left-icon path , .btn-on-dark-bg:hover .btn-left-icon path{
+    animation: color_anim_black 1s infinite 0.2s;
+}
+.bg-black-btn:hover .btn-middle-icon path , .btn-on-dark-bg:hover .btn-middle-icon path{
+    animation: color_anim_black 1s infinite 0.4s;
+}
+.bg-black-btn:hover .btn-right-icon path , .btn-on-dark-bg:hover .btn-right-icon path{
+    animation: color_anim_black 1s infinite 0.6s;
+}
+
+@keyframes color_anim {
+    0% {
+        fill: var(--base-white-a);
+    }
+    50% {
+        fill: var(--theme-color-a);
+    }
+    100% {
+        fill: var(--base-white-a);
+    }
+}
+@keyframes color_anim_black {
+    0% {
+        fill: var(--base-white-a);
+    }
+    50% {
+        fill: var(--base-black-a);
+    }
+    100% {
+        fill: var(--base-white-a);
+    }
+}
+
+/* ===================================
+Default CSS
+=================================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+    font-family: "Lato", sans-serif;
+    color: var(--base-black-a);
+}
+ul,ol{
+    list-style: none;
+    margin: 0;
+}
+select:focus{
+    outline: none;
+}
+
+
+
+/* ===================================
+Reusable CSS
+=================================== */
+.full-width{
+    width: 100%;
+}
+.height-80vh{
+    height: 80vh;
+}
+.height-100vh{
+    height: 100vh;
+}
+
+
+
+.hover-pointer{
+    cursor: pointer;
+}
+
+.banner-has-image{
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.attachment-fixed{
+    background-attachment: fixed;
+}
+/* Fonts */
+.font-20{
+    font-size: 20px;
+}
+.font-56{
+    font-size: 56px;
+}
+/* Specing */
+.py-24{
+    padding: 24px 0px;
+}
+.py-54{
+    padding: 54px 0px;
+}
+.py-40{
+    padding: 40px 0px;
+}
+.py-80{
+    padding: 80px 0px;
+}
+.p-34{
+    padding: 34px;
+}
+.section-padding{
+    padding: 120px 0px;
+}
+.section-pt{
+    padding-top: 120px;
+}
+.section-pb-small{
+    padding-bottom: 60px;
+}
+.section-title{
+    font-size: 48px;
+    font-weight: 700;
+}
+.mb-80{
+    margin-bottom: 80px;
+}
+.mb-60{
+    margin-bottom: 60px;
+}
+/* ===================================
+Header CSS
+=================================== */
+.main-menu .nav-link{
+    color: var(--theme-color-b);
+    font-weight: 600;
+}
+.main-menu .nav-link:hover, .main-menu .nav-link.active{
+    color: var(--theme-color-a);
+}
+
+/* ===================================
+Banner CSS
+=================================== */
+.banner h1{
+    font-size: 76px;
+    line-height: 44px;
+}
+
+.banner h3{
+    font-size: 82px;
+}
+.banner h3:last-child{
+    font-size: 112px;
+}
+
+/* ===================================
+Trendy Collection CSS
+=================================== */
+
+
+/* ===================================
+About US CSS
+=================================== */
+.about-section::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 82vh;
+    z-index: -1;
+    background: var(--base-white-c);
+    top: 0;
+}
+.about-secription-area{
+    font-size: 16px;
+    line-height: 140%;
+    padding-left: 20px;
+}
+
+/* ===================================
+Shop Category CSS
+=================================== */
+.single-category{
+    transition: .3s ease;
+}
+.single-category:hover{
+    transform: translateY(-15px);
+}
+.single-category:hover span{
+    color: var(--theme-color-a);
+}
+
+.features-product{
+    margin-bottom: 80px;
+    transition: .3s ease;
+}
+.features-product:hover{
+    transform: translateY(-15px);
+}
+.product-offer-badge {
+    top: 12px;
+    left: 44px;
+    font-size: 12px;
+    background: #FFA965;
+    padding: 2px 15px;
+}
+.product-offer-badge.out-of-stock{
+    background: #A9A9A9;
+}
+.product-offer-badge.hot{
+    background: #FF554E;
+}
+.border-dasshed{
+    border: 1px dashed var(--base-black-a);
+}
+
+
+/* ===================================
+Footer CSS
+=================================== */
+.footer-social li{
+    width: 40px;
+    height: 40px;
+    border: 1.6px solid var(--base-black-a);
+    cursor: pointer;
+    transition: .3s ease;
+}
+.footer-social li img{
+    height: 15px;
+}
+.footer-social li:hover{
+    background: var(--theme-color-a);
+    border-color: var(--theme-color-a);
+}
+.footer-social li:hover img{
+    filter: brightness(0) invert(1);
+}
+
+
+/* ===================================
+Responsive CSS
+=================================== */
+.responsive-2xxl-show{
+    display: none;
+}
+
+@media (min-width: 1600px){
+    .main-hero-image{
+        display: none;
+    }
+    .banner{
+        padding-top: 50px;
+    }
+    .responsive-2xxl-show{
+        display: block;
+    }
+}
