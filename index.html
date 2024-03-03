@@ -8,9 +8,11 @@
     <title>Luxara - Jewellary Landing Page</title>
 
     <link rel="shortcut icon" href="./assets/img/fa-icon.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="./assets/lib/slick-1.8.1/slick/slick-theme.css">
+    
+                        
     <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
@@ -25,13 +27,13 @@
 
         <div class="header-top bg-white-a py-24">
             <div class="container">
-                <div class="d-flex justify-content-between">
-                    <div class="header-top-left-area d-flex align-items-center justify-content-between">
-                        <span class="me-5 pe-3"><img src="./assets/img/icons/clock.svg" class="me-2" alt="Clock Icon"> Mon - Fri 8:00 - 18:00 / Sunday 8:00 - 14:00</span>
+                <div class="d-flex justify-content-between responsive-xs-column responsive-xs-align-center responsive-xs-gap-10p">
+                    <div class="header-top-left-area d-flex align-items-center justify-content-between responsive-column responsive-align-start responsive-xs-align-center responsive-xs-gap-10p">
+                        <span class="me-5 pe-2 xs-pm-0"><img src="./assets/img/icons/clock.svg" class="me-2" alt="Clock Icon"> Mon - Fri 8:00 - 18:00 / Sunday 8:00 - 14:00</span>
                         <span><img src="./assets/img/icons/phone.svg" class="me-2" alt="Phone Icon"> +971 4 321 9876</span>
                     </div>
                     <div class="header-top-right-area d-flex justify-content-end">
-                        <ul class="d-flex gap-4 align-items-center">
+                        <ul class="d-flex gap-4 align-items-center ps-0">
                             <li class="hover-pointer"><img src="./assets/img/icons/search.svg" alt="Search Icon">
                             </li>
                             <li class="hover-pointer"><img src="./assets/img/icons/heart.svg" alt="Heart Icon"></li>
@@ -76,9 +78,11 @@
                                     JEWELRY
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">Earrings</a></li>
+                                    <li><a class="dropdown-item" href="#">Necklaces</a></li>
+                                    <li><a class="dropdown-item" href="#">Rings</a></li>
+                                    <li><a class="dropdown-item" href="#">Bracelets</a></li>
+                                    <li><a class="dropdown-item" href="#">Charm & Dangles</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item"><a class="nav-link" href="#">DIAMOND</a></li>
@@ -102,18 +106,18 @@
     <section class="banner banner-has-image" style="background-image:url('./assets/img/banner-bg.jpg') ;">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6">
+                <div class="col-lg-6 responsive-text-center">
                     <img src="./assets/img/hero-model.png" alt="Hero Model" class="full-width main-hero-image">
                     <img src="./assets/img/hero-model-lg.png" alt="Hero Model" class="full-width responsive-2xxl-show">
                 </div>
                 <div class="col-lg-6">
-                    <div class="banner-content text-end">
-                        <h3 class="arabic-font"> كُن جميلًا كل يوم! </h3>
+                    <div class="banner-content text-end responsive-text-center">
+                        <h3 class="arabic-font-2"> كُن جميلًا كل يوم! </h3>
                         <h1 class="fw-bold text-uppercase">Be Beautiful</h1>
                         <h3 class="gerat-vibes-font">Everyday !</h3>
                         
                     </div>
-                    <div class="text-end mt-5 pt-4">
+                    <div class="text-end mt-5 pt-4 banner-button responsive-text-center">
                         <button class="theme-btn fw-semibold align-items-center button-animation">Shop Now 
                             <svg width="20" height="21" viewBox="0 0 20 21" class="btn-img btn-left-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.4531 10.5L6.64062 2.6875L5.53125 3.79687L8.21875 6.46875L12.25 10.5L8.21875 14.5312L5.54687 17.2031L6.65625 18.3125L14.4531 10.5Z" fill="#645331"/>
@@ -138,24 +142,115 @@
     <section class="section-padding">
         <div class="container">
             <h3 class="section-title text-center base-black-a mb-80">Most Trendy Collection</h3>
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="collection-items hover-pointer">
-                    <img src="./assets/img/products/trendy-1.png" alt="Trendy Items">
+            <!-- <div class="d-flex justify-content-between align-items-center collection-items-slider"> -->
+            <div class="collection-items-slider" data-slick='{"slidesToShow": 5, "slidesToScroll": 1}'>
+                
+                
+                <div class="collection-items p-34 text-center rounded-2 hover-pointer align-items-center justify-content-center d-flex">
+                    <div class="">
+                        <img src="./assets/img/products/trendy-3.png" alt="Trendy Items">
+                        <div class="collection-items-info">
+                            <p class="font-20 base-para-a mb-2">Original Sharpe <br> Round Diamond Ring</p>
+                            <span class="base-a-op-90 fw-5 fw-bold">AED 6,500</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="collection-items hover-pointer">
-                    <img src="./assets/img/products/trendy-2.png" alt="Trendy Items">
+                
+                <div class="collection-items p-34 text-center rounded-2 hover-pointer align-items-center justify-content-center d-flex">
+                    <div class="">
+                        <img src="./assets/img/products/trendy-1.png" alt="Trendy Items">
+                        <div class="collection-items-info">
+                            <p class="font-20 base-para-a mb-2">Gold Heritage <br> Diamond Ring</p>
+                            <span class="base-a-op-90 fw-5 fw-bold">AED 6,800</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="collection-items p-34 border text-center rounded-2 hover-pointer">
-                    <img src="./assets/img/products/trendy-3.png" class="mb-4" alt="Trendy Items">
-                    <p class="font-20 base-para-a mb-2">Original Sharpe <br> Round Diamond Ring</p>
-                    <span class="base-a-op-90 fw-5 fw-bold">AED 6,500</span>
+                
+                <div class="collection-items p-34 text-center rounded-2 hover-pointer align-items-center justify-content-center d-flex">
+                    <div>
+                        <img src="./assets/img/products/trendy-2.png" alt="Trendy Items">
+                        <div class="collection-items-info">
+                            <p class="font-20 base-para-a mb-2">Herringbone<br>  Diamond Ring</p>
+                            <span class="base-a-op-90 fw-5 fw-bold">AED 5,800</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="collection-items hover-pointer">
-                    <img src="./assets/img/products/trendy-2.png" alt="Trendy Items">
+                
+                <div class="collection-items p-34 text-center rounded-2 hover-pointer align-items-center justify-content-center d-flex">
+                    <div>
+                        <img src="./assets/img/products/trendy-2.png" alt="Trendy Items">
+                        <div class="collection-items-info">
+                            <p class="font-20 base-para-a mb-2">Original Sharpe <br> Round Diamond Ring</p>
+                            <span class="base-a-op-90 fw-5 fw-bold">AED 6,500</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="collection-items hover-pointer">
-                    <img src="./assets/img/products/trendy-1.png" alt="Trendy Items">
+                
+                <div class="collection-items p-34 text-center rounded-2 hover-pointer align-items-center justify-content-center d-flex">
+                    <div>
+                        <img src="./assets/img/products/trendy-1.png" alt="Trendy Items">
+                        <div class="collection-items-info">
+                            <p class="font-20 base-para-a mb-2">Original Sharpe <br> Round Diamond Ring</p>
+                            <span class="base-a-op-90 fw-5 fw-bold">AED 6,500</span>
+                        </div>
+                    </div>
                 </div>
+                
+                
+                <div class="collection-items p-34 text-center rounded-2 hover-pointer align-items-center justify-content-center d-flex">
+                    <div class="">
+                        <img src="./assets/img/products/trendy-3.png" alt="Trendy Items">
+                        <div class="collection-items-info">
+                            <p class="font-20 base-para-a mb-2">Original Sharpe <br> Round Diamond Ring</p>
+                            <span class="base-a-op-90 fw-5 fw-bold">AED 6,500</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-items p-34 text-center rounded-2 hover-pointer align-items-center justify-content-center d-flex">
+                    <div class="">
+                        <img src="./assets/img/products/trendy-1.png" alt="Trendy Items">
+                        <div class="collection-items-info">
+                            <p class="font-20 base-para-a mb-2">Gold Heritage <br> Diamond Ring</p>
+                            <span class="base-a-op-90 fw-5 fw-bold">AED 6,800</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-items p-34 text-center rounded-2 hover-pointer align-items-center justify-content-center d-flex">
+                    <div>
+                        <img src="./assets/img/products/trendy-2.png" alt="Trendy Items">
+                        <div class="collection-items-info">
+                            <p class="font-20 base-para-a mb-2">Herringbone<br>  Diamond Ring</p>
+                            <span class="base-a-op-90 fw-5 fw-bold">AED 5,800</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-items p-34 text-center rounded-2 hover-pointer align-items-center justify-content-center d-flex">
+                    <div>
+                        <img src="./assets/img/products/trendy-2.png" alt="Trendy Items">
+                        <div class="collection-items-info">
+                            <p class="font-20 base-para-a mb-2">Original Sharpe <br> Round Diamond Ring</p>
+                            <span class="base-a-op-90 fw-5 fw-bold">AED 6,500</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="collection-items p-34 text-center rounded-2 hover-pointer align-items-center justify-content-center d-flex">
+                    <div>
+                        <img src="./assets/img/products/trendy-1.png" alt="Trendy Items">
+                        <div class="collection-items-info">
+                            <p class="font-20 base-para-a mb-2">Original Sharpe <br> Round Diamond Ring</p>
+                            <span class="base-a-op-90 fw-5 fw-bold">AED 6,500</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
             </div>
         </div>
     </section>
@@ -167,17 +262,17 @@
     <section class="section-pt about-section position-relative">
         <div class="container">
             <div class="row align-items-start">
-                <div class="col-lg-6">
+                <div class="col-lg-6 responsive-col-gap">
                     <div class="position-relative me-1">
                         <img src="./assets/img/about-shop.jpg" class="full-width" alt="Shop Front Image">
                         
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="about-secription-area">
+                    <div class="about-secription-area responsive-text-center">
 
                         <h3 class="section-title base-black-a mb-3">About Our Brand</h3>
-                        <p class="mb-60 base-para-a">"LUXORA" stands as a premier jewelry brand in Dubai, renowned for its <br> exquisite gold and diamond collections. Established with a notable retail <br> presence across the city, "LUXORA" is committed to ESG principles, <br> focusing on Health, Education, and Women Empowerment initiatives. <br><br> As a socially responsible entity, a significant portion of profits is allocated <br> towards community causes. Our jewelry collection, meticulously crafted <br> from fine silver and adorned with simulated diamonds, offers indulgent <br> options tailored to individual styles.</p>
+                        <p class="mb-60 base-para-a">"LUXORA" stands as a premier jewelry brand in Dubai, renowned for its <br class="responsive-xs-none"> exquisite gold and diamond collections. Established with a notable retail <br class="responsive-xs-none"> presence across the city, "LUXORA" is committed to ESG principles, <br class="responsive-xs-none"> focusing on Health, Education, and Women Empowerment initiatives. <br><br> As a socially responsible entity, a significant portion of profits is allocated <br class="responsive-xs-none"> towards community causes. Our jewelry collection, meticulously crafted <br class="responsive-xs-none"> from fine silver and adorned with simulated diamonds, offers indulgent <br> options tailored to individual styles.</p>
                         
                         <div class="">
                             <button class="theme-btn bg-black-btn fw-semibold align-items-center button-animation"> About us
@@ -207,7 +302,7 @@
         <div class="container">
             <h3 class="section-title text-center base-black-a mb-80">Shop By Category</h3>
 
-            <div class="category-product-container d-flex justify-content-between mb-80">
+            <div class="category-product-container responsive-justify-center d-flex justify-content-between mb-80">
 
                 <div class="single-category hover-pointer text-center">
                     <div class="category-image mb-4">
@@ -304,7 +399,7 @@
             <div class="features product-container px-5">
                 <div class="row">
 
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="features-product text-center hover-pointer position-relative">
                             <span class="product-offer-badge position-absolute fw-semibold text-uppercase base-white-a">20% Off</span>
                             <img src="./assets/img/products/features-1.jpg" alt="Features Product">
@@ -314,7 +409,7 @@
                         </div>
                     </div>
     
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="features-product text-center hover-pointer position-relative">
                             <span class="product-offer-badge position-absolute fw-semibold text-uppercase base-white-a">19% Off</span>
                             <img src="./assets/img/products/features-2.jpg" alt="Features Product">
@@ -324,7 +419,7 @@
                         </div>
                     </div>
     
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="features-product text-center hover-pointer position-relative">
                             <span class="product-offer-badge position-absolute fw-semibold text-uppercase base-white-a out-of-stock">Out Of Stock</span>
                             <img src="./assets/img/products/features-3.jpg" alt="Features Product">
@@ -334,7 +429,7 @@
                         </div>
                     </div>
     
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="features-product text-center hover-pointer ">
                             
                             <img src="./assets/img/products/features-4.jpg" alt="Features Product">
@@ -344,7 +439,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="features-product text-center hover-pointer position-relative">
                             <span class="product-offer-badge position-absolute fw-semibold text-uppercase base-white-a hot">Hot</span>
                             <img src="./assets/img/products/features-5.jpg" alt="Features Product">
@@ -354,7 +449,7 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
                         <div class="features-product text-center hover-pointer position-relative">
                             <span class="product-offer-badge position-absolute fw-semibold text-uppercase base-white-a">22% off</span>
                             <img src="./assets/img/products/features-6.jpg" alt="Features Product">
@@ -400,13 +495,13 @@
     <section class="bg-black-a section-padding">
         <div class="container">
             <h3 class="section-title text-center base-white-a mb-1">New Arrivals</h3>
-            <p class="mb-60 text-center base-para-a fs-5">Explore our newest arrivals: stunning pieces crafted to elevate <br> your style with timeless elegance.</p>
+            <p class="mb-60 text-center base-para-a fs-5">Explore our newest arrivals: stunning pieces crafted to elevate <br class="responsive-xs-none"> your style with timeless elegance.</p>
             
 
             <div class="features product-container px-5">
-                <div class="row">
+                <div class="row responsive-justify-center">
 
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 col-sm-6">
                         <div class="features-product text-center hover-pointer position-relative">
                             <img src="./assets/img/products/new-arrivals-1.jpg" alt="Features Product">
                             <p class="base-para-a my-2">Necklaces</p>
@@ -415,7 +510,7 @@
                         </div>
                     </div>
     
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 col-sm-6">
                         <div class="features-product text-center hover-pointer position-relative">
                             <img src="./assets/img/products/new-arrivals-2.png" alt="Features Product">
                             <p class="base-para-a my-2">Diamond</p>
@@ -424,7 +519,7 @@
                         </div>
                     </div>
     
-                    <div class="col-md-6 col-lg-4">
+                    <div class="col-md-6 col-lg-4 col-sm-6">
                         <div class="features-product text-center hover-pointer position-relative">
                             <img src="./assets/img/products/new-arrivals-3.jpg" alt="Features Product">
                             <p class="base-para-a my-2">Necklaces</p>
@@ -460,28 +555,28 @@
     <section class="py-80">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 responsive-col-gap-sm">
                     <div class="single-overview px-3 py-2 text-center">
                         <img src="./assets/img/icons/free-shipping.svg" alt="Free Shipping Icon">
                         <p class="base-black-a mb-0 mt-3 font-20">Free Shipping</p>
                         <span class="base-para-a">For all Orders Over $100</span>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6 responsive-col-gap-sm">
                     <div class="single-overview px-3 py-2 text-center">
                         <img src="./assets/img/icons/returns.svg" alt="Free Shipping Icon">
                         <p class="base-black-a mb-0 mt-3 font-20">30 Days Returns</p>
                         <span class="base-para-a">For an Exchange Product</span>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                     <div class="single-overview px-3 py-2 text-center">
                         <img src="./assets/img/icons/secured-payment.svg" alt="Free Shipping Icon">
                         <p class="base-black-a mb-0 mt-3 font-20">Secured Payment</p>
                         <span class="base-para-a">Payment Cards Accepted</span>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                     <div class="single-overview px-3 py-2 text-center">
                         <img src="./assets/img/icons/support.svg" alt="Free Shipping Icon">
                         <p class="base-black-a mb-0 mt-3 font-20">Support 24/7</p>
@@ -497,19 +592,19 @@
     <!-- =====================================
     Shop Bottom Sction 
     ===================================== -->
-    <section class="banner-has-image  height-100vh d-flex align-items-center" style="background-image:url('./assets/img/shop-bg.jpg') ;">
+    <section class="banner-has-image position-relative shop-bottom-banner height-100vh d-flex align-items-center" style="background-image:url('./assets/img/shop-bg.jpg') ;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6"></div>
                 <div class="col-lg-6">
-                    <div class="text-end base-white-a">
+                    <div class="text-end base-white-a responsive-text-center">
                         <h3 class="font-56 mb-4 arabic-font-2"> "لحظات لا تُنسى
                            <br> هي رونقك الزفافي" </h3>
                         <h3 class="fs-1">Unforgettable Moments Is <br> Your Bridal Radiance</h3>
                         
                     </div>
 
-                    <div class="text-end mt-5 pt-4">
+                    <div class="text-end mt-5 pt-4 responsive-text-center">
                         <button class="theme-btn bg-black-btn fw-semibold align-items-center button-animation">Shop Now 
                             <svg width="20" height="21" viewBox="0 0 20 21" class="btn-img btn-left-icon" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M14.4531 10.5L6.64062 2.6875L5.53125 3.79687L8.21875 6.46875L12.25 10.5L8.21875 14.5312L5.54687 17.2031L6.65625 18.3125L14.4531 10.5Z" fill="#645331"/>
@@ -536,7 +631,7 @@
         <div class="container">
             <div class="footer-top">
                 <div class="row">
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-3 col-sm-6 responsive-col-gap">
                         <img src="./assets/img/logo.png" alt="Logo" width="160px">
                         <p class="my-4">Premier Dubai jewelry brand. <br> Exquisite gold, diamond collections. <br> Elegance redefined.</p>
                         <ul class="d-flex footer-social gap-3 ps-0">
@@ -546,8 +641,8 @@
                             <li class="d-flex align-items-center justify-content-center rounded-circle"><img src="./assets/img/icons/instagram.svg"  alt="Facebook Icon"></li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="ps-4">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6 responsive-col-gap">
+                        <div class="ps-4 responsive-ps-none">
                             <p class="font-20 fw-bold mb-3">Shop Categories</p>
                             <ul class="ps-0">
                                 <li class="mb-3 base-para-a hover-theme-color-a hover-pointer">Earrings</li>
@@ -558,7 +653,7 @@
                         </ul>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-6">
                         <p class="font-20 fw-bold mb-3">Company</p>
                         <ul class="ps-0">
                             <li class="mb-3 base-para-a hover-theme-color-a hover-pointer">Contact us</li>
@@ -568,7 +663,7 @@
                             <li class="base-para-a hover-theme-color-a hover-pointer">Help & Support</li>
                         </ul>
                     </div>
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <p class="font-20 fw-bold mb-3">Location</p>
                         <ul class="ps-0">
                             <li class="mb-3 base-para-a hover-theme-color-a hover-pointer"><span class="base-black-a">Address:</span> Dubai Mall, Level 7 <br> Sheikh Mohammed bin Rashid Boulevard <br> Dubai, United Arab Emirates</li>
@@ -580,8 +675,8 @@
             </div>
             <div class="footer-bottom py-54">
                 <div class="row">
-                    <div class="col-md-7"><span>Copyright © 2024 Luxora All Rights Reserved</span></div>
-                    <div class="col-md-5 text-end">
+                    <div class="col-md-7 responsive-xs-center responsive-col-gap-sm"><span>Copyright © 2024 Luxora All Rights Reserved</span></div>
+                    <div class="col-md-5 text-end responsive-xs-center">
                         <img src="./assets/img/payment-mathod.png" alt="Payment Mathod">
                     </div>
                 </div>
@@ -594,7 +689,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
         crossorigin="anonymous"></script>
-
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./assets/js/script.js"></script>
 
 </body>
