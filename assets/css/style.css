@@ -501,7 +501,7 @@ Small Display and Tablet display
     }
     .single-category{
         width: 31%;
-        margin-bottom: 5%;
+        margin-bottom: 10%;
     }
     .category-product-container {
         flex-wrap: wrap;
