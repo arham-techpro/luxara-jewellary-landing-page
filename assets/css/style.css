@@ -495,9 +495,7 @@ Small Display and Tablet display
     .banner-content {
         padding-top: 60px;
     }
-    .banner {
-        padding-bottom: 60px;
-    }
+    
     .text-end.mt-5.pt-4.banner-button{
         padding-top: 0;
     }
@@ -539,7 +537,9 @@ Small Display and Tablet display
         z-index: -1;
         background: #1515157a;
     }
-
+    .responsive-direction-cr{
+        flex-direction: column-reverse;
+    }
 }
 @media (max-width: 768px){
     .responsive-xs-column{
@@ -569,7 +569,7 @@ Small Display and Tablet display
     .fs-4,.fs-5{
         font-size: 1rem !important;
     }
-    .responsive-col-gap-sm{
+    responsive-direction-cr-sm{
         margin-bottom: 15px ;
     }
     .font-56 {
@@ -602,9 +602,8 @@ Small Display and Tablet display
         padding-top: 30px;
     }
     .banner {
-        padding-top: 30px;
         padding-bottom: 0px;
-        height: 76vh;
+        height: 71vh;
     }
     .text-end.mt-5.pt-4.banner-button{
         margin-top: 25px !important;
