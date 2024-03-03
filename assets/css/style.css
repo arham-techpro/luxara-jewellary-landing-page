@@ -224,7 +224,7 @@ Reusable CSS
 }
 /* Specing */
 .py-24{
-    padding: 24px 0px;
+    padding: 12px 0px;
 }
 .py-54{
     padding: 54px 0px;
@@ -271,6 +271,9 @@ Header CSS
 /* ===================================
 Banner CSS
 =================================== */
+.banner{
+    padding-top: 30px;
+}
 .banner h1{
     font-size: 76px;
     line-height: 44px;
@@ -418,6 +421,12 @@ Responsive CSS
     }
     .banner h3:last-child{
         font-size: 122px;
+    }
+    .py-24{
+        padding: 24px 0px;
+    }
+    .header-bottom {
+        padding: 15px 0px;
     }
 }
 
@@ -584,9 +593,7 @@ Small Display and Tablet display
         padding: 0 !important;
         margin: 0 !important;
     }
-    .py-24 {
-        padding: 20px 0px;
-    }
+   
     .banner h1{
         font-size: 46px;
         line-height: 14px;
